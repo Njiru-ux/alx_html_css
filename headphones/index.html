@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - Premium Audio Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">headphones</a>
+                
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-button">
+                    <span class="menu-icon"></span>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li><a href="#what-we-do">what we do</a></li>
+                    <li><a href="#our-results">our results</a></li>
+                    <li><a href="#contact-us">contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero" id="main-content">
+        <!-- Slideshow Container -->
+        <div class="hero-slideshow">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+        </div>
+        
+        <!-- Slideshow Controls -->
+        <div class="slideshow-controls">
+            <button class="slide-dot active" data-slide="0" aria-label="Show slide 1"></button>
+            <button class="slide-dot" data-slide="1" aria-label="Show slide 2"></button>
+            <button class="slide-dot" data-slide="2" aria-label="Show slide 3"></button>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Experience Music Like Never Before</h1>
+                <p class="hero-subtitle">Premium sound quality for your everyday moments</p>
+                <button class="cta-button">DISCOVER NOW</button>
+                <p class="hero-description">
+                    Immerse yourself in crystal-clear audio with our premium headphones. Engineered for comfort and designed for style, our headphones deliver unparalleled sound quality whether you're working out, commuting, or relaxing at home.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="section what-we-do">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What we do...</h2>
+                <p class="section-description">
+                    We specialize in creating premium audio experiences through innovative technology and superior craftsmanship. Our headphones are designed to deliver exceptional sound quality while providing ultimate comfort for all-day wear.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3 class="service-title">Sound Engineering</h3>
+                    <p class="service-description">Precision-tuned audio drivers for crystal clear sound across all frequencies.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-title">Active Lifestyle</h3>
+                    <p class="service-description">Sweat-resistant and secure-fit design for your most intense workouts.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="service-title">All-Day Comfort</h3>
+                    <p class="service-description">Memory foam ear cushions for extended listening sessions without fatigue.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="service-title">Fast Charging</h3>
+                    <p class="service-description">Quick charge technology for hours of playback from just minutes of charging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Results Section -->
+    <section id="our-results" class="section results">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our results speak for themselves</h2>
+                <p class="section-description">
+                    Join over 1 million satisfied customers who have transformed their audio experience with our premium headphones.
+                </p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-pentagon">
+                        <span class="result-percentage">+95%</span>
+                        <span class="result-label">Customer Satisfaction</span>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-pentagon">
+                        <span class="result-percentage">+72%</span>
+                        <span class="result-label">Sound Quality Rating</span>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-pentagon">
+                        <span class="result-percentage">+68%</span>
+                        <span class="result-label">Battery Life Improvement</span>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-pentagon">
+                        <span class="result-percentage">+81%</span>
+                        <span class="result-label">Comfort Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="section contact">
+        <div class="container">
+            <div class="contact-form-container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description" style="margin-bottom: 2rem;">Have questions? Our audio experts are here to help you find the perfect headphones.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your audio needs..." rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">headphones</div>
+                
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <p class="copyright">&copy; 2023 Headphones Audio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
