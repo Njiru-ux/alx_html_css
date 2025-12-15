@@ -1,0 +1,469 @@
+/* ============================================
+   CSS RESET & BASE STYLES
+   ============================================ */
+
+/* Reset margins and paddings for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove default list styling */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default button styling */
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   CSS VARIABLES (Custom Properties)
+   ============================================ */
+
+:root {
+    /* Colors */
+    --color-primary: #FF6565;
+    --color-text: #FFFFFF;
+    --color-text-secondary: rgba(255, 255, 255, 0.9);
+    --color-text-muted: rgba(255, 255, 255, 0.8);
+    --color-bg-dark: #071629;
+    --color-bg-hero: rgba(7, 22, 41, 0.9);
+    
+    /* Typography */
+    --font-family-base: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;  /* 14px */
+    --font-size-xsmall: 0.75rem;  /* 12px */
+    --font-size-large: 2rem;      /* 32px */
+    --font-size-xlarge: 2.5rem;   /* 40px */
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;    /* 4px */
+    --spacing-sm: 0.5rem;     /* 8px */
+    --spacing-md: 1rem;       /* 16px */
+    --spacing-lg: 1.5rem;     /* 24px */
+    --spacing-xl: 2rem;       /* 32px */
+    --spacing-xxl: 3rem;      /* 48px */
+    
+    /* Layout */
+    --max-width: 1000px;
+    --mobile-breakpoint: 480px;
+    --header-height: 5rem;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-timing: ease;
+}
+
+/* ============================================
+   BASE ELEMENT STYLES
+   ============================================ */
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-bg-dark);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    z-index: 1001;
+}
+
+.logo img {
+    width: 160px;
+    height: 32px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-menu a {
+    font-size: var(--font-size-xsmall);
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--color-text);
+    transition: color var(--transition-speed) var(--transition-timing);
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a:active {
+    color: var(--color-primary);
+}
+
+/* Mobile Menu Toggle (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    position: relative;
+    transition: background-color var(--transition-speed) var(--transition-timing);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: transform var(--transition-speed) var(--transition-timing);
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    bottom: -8px;
+}
+
+.menu-toggle:checked + .menu-button .menu-icon {
+    background-color: transparent;
+}
+
+.menu-toggle:checked + .menu-button .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle:checked + .menu-button .menu-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* ============================================
+   HERO SECTION STYLES
+   ============================================ */
+
+.hero {
+    min-height: 100vh;
+    background: 
+        linear-gradient(var(--color-bg-hero), var(--color-bg-hero)),
+        url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+}
+
+.hero .container {
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: var(--font-size-xlarge);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text);
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text);
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: var(--font-size-small);
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: var(--spacing-xxl) auto 0;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: var(--font-size-xsmall);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 25px;
+    transition: all var(--transition-speed) var(--transition-timing);
+    margin-bottom: var(--spacing-xl);
+}
+
+.cta-button:hover,
+.cta-button:active {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 101, 101, 0.3);
+}
+
+.cta-button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================ */
+
+/* Tablet Styles (481px and above) */
+@media (min-width: 481px) {
+    .hero-title {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+}
+
+/* Desktop Styles (769px and above) */
+@media (min-width: 769px) {
+    :root {
+        --font-size-xlarge: 3rem;
+    }
+    
+    .hero-content {
+        padding: var(--spacing-xxl) 0;
+    }
+}
+
+/* ============================================
+   MOBILE STYLES (480px and below)
+   ============================================ */
+
+@media (max-width: 480px) {
+    /* Adjust container padding */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Mobile Navigation */
+    .menu-button {
+        display: flex;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg-dark);
+        transform: translateX(100%);
+        transition: transform var(--transition-speed) var(--transition-timing);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-toggle:checked ~ .navbar {
+        transform: translateX(0);
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .nav-menu a {
+        font-size: var(--font-size-small);
+        display: block;
+        padding: var(--spacing-md) 0;
+    }
+    
+    /* Hero Section Adjustments */
+    .hero {
+        min-height: 80vh;
+        padding-top: calc(var(--header-height) + var(--spacing-md));
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-subtitle {
+        font-size: 0.875rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-description {
+        font-size: 0.75rem;
+        margin-top: var(--spacing-xl);
+    }
+    
+    /* Button Adjustments */
+    .cta-button {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 0.75rem;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: white;
+    padding: var(--spacing-sm);
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .header,
+    .cta-button {
+        display: none;
+    }
+    
+    .hero {
+        background: none !important;
+        color: black;
+        min-height: auto;
+    }
+    
+    .hero-title,
+    .hero-subtitle,
+    .hero-description {
+        color: black;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE SUPPORT
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    .hero-title,
+    .hero-subtitle,
+    .hero-description,
+    .nav-menu a {
+        color: #FFFFFF;
+    }
+    
+    .cta-button {
+        background-color: #FF0000;
+    }
+}
