@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - Animated Sections</title>
+    <link rel="stylesheet" href="7-styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Header -->
+    <header class="animated-header">
+        <h1>í¾¬ Task 7: Animated Sections</h1>
+        <p>Hover over the items below to see animations!</p>
+    </header>
+
+    <!-- What We Do Section with Animations -->
+    <section class="section services">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title animate-title">What we do...</h2>
+                <p class="section-tagline">We provide exceptional audio solutions with cutting-edge technology and design.</p>
+            </header>
+            
+            <div class="section-body">
+                <div class="services-grid">
+                    <!-- Service 1 - Bounce Animation -->
+                    <div class="service-card bounce-animation">
+                        <div class="service-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="service-title">Sound Design</h3>
+                        <p class="service-description">Crystal clear audio with premium sound engineering.</p>
+                    </div>
+                    
+                    <!-- Service 2 - Rotate Animation -->
+                    <div class="service-card rotate-animation">
+                        <div class="service-icon">
+                            <i class="fas fa-headphones-alt"></i>
+                        </div>
+                        <h3 class="service-title">Headphone Design</h3>
+                        <p class="service-description">Ergonomic and stylish designs for all-day comfort.</p>
+                    </div>
+                    
+                    <!-- Service 3 - Scale Animation -->
+                    <div class="service-card scale-animation">
+                        <div class="service-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <h3 class="service-title">Audio Testing</h3>
+                        <p class="service-description">Rigorous testing for optimal sound quality.</p>
+                    </div>
+                    
+                    <!-- Service 4 - Shake Animation -->
+                    <div class="service-card shake-animation">
+                        <div class="service-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h3 class="service-title">Wireless Tech</h3>
+                        <p class="service-description">Advanced Bluetooth technology with long range.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Results Section with Animations -->
+    <section class="section results">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title animate-title">Our results speak for themselves</h2>
+                <p class="section-tagline">See how we're making an impact with stunning growth metrics.</p>
+            </header>
+            
+            <div class="section-body">
+                <div class="results-grid">
+                    <!-- Result 1 - Pulse Animation -->
+                    <div class="result-card pulse-animation">
+                        <div class="result-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="result-value">+45%</div>
+                        <div class="result-label">Revenue Growth</div>
+                        <div class="result-bar">
+                            <div class="bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Result 2 - Flip Animation -->
+                    <div class="result-card flip-animation">
+                        <div class="result-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="result-value">+32%</div>
+                        <div class="result-label">Customer Growth</div>
+                        <div class="result-bar">
+                            <div class="bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Result 3 - Fade Animation -->
+                    <div class="result-card fade-animation">
+                        <div class="result-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="result-value">4.9/5</div>
+                        <div class="result-label">Customer Rating</div>
+                        <div class="result-bar">
+                            <div class="bar-fill" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Result 4 - Glow Animation -->
+                    <div class="result-card glow-animation">
+                        <div class="result-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="result-value">+28%</div>
+                        <div class="result-label">Market Reach</div>
+                        <div class="result-bar">
+                            <div class="bar-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animation Controls -->
+    <div class="animation-controls">
+        <h3>Animation Controls</h3>
+        <div class="controls-grid">
+            <button class="control-btn" id="playAll">Play All Animations</button>
+            <button class="control-btn" id="pauseAll">Pause All Animations</button>
+            <button class="control-btn" id="randomize">Randomize Animations</button>
+            <button class="control-btn" id="resetAll">Reset Animations</button>
+        </div>
+        <div class="speed-control">
+            <label for="speedRange">Animation Speed:</label>
+            <input type="range" id="speedRange" min="0.5" max="3" step="0.1" value="1">
+            <span id="speedValue">1.0x</span>
+        </div>
+    </div>
+
+    <!-- Footer (from Task 4) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo-img">
+                    <span class="logo-text">headphones</span>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> headphones. Task 7: Animated Sections</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Animation controls
+            const playAllBtn = document.getElementById('playAll');
+            const pauseAllBtn = document.getElementById('pauseAll');
+            const randomizeBtn = document.getElementById('randomize');
+            const resetBtn = document.getElementById('resetAll');
+            const speedRange = document.getElementById('speedRange');
+            const speedValue = document.getElementById('speedValue');
+            
+            const animatedElements = document.querySelectorAll('.service-card, .result-card');
+            const title = document.querySelector('.animate-title');
+            
+            // Title animation on load
+            setTimeout(() => {
+                title.classList.add('animated');
+            }, 500);
+            
+            // Play all animations
+            playAllBtn.addEventListener('click', function() {
+                animatedElements.forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
+                title.style.animationPlayState = 'running';
+            });
+            
+            // Pause all animations
+            pauseAllBtn.addEventListener('click', function() {
+                animatedElements.forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                });
+                title.style.animationPlayState = 'paused';
+            });
+            
+            // Randomize animations
+            randomizeBtn.addEventListener('click', function() {
+                const animations = [
+                    'bounce', 'rotate', 'scale', 'shake',
+                    'pulse', 'flip', 'fade', 'glow',
+                    'slide', 'float', 'wiggle', 'spin'
+                ];
+                
+                animatedElements.forEach(el => {
+                    const randomAnim = animations[Math.floor(Math.random() * animations.length)];
+                    el.style.animation = `${randomAnim} 1s ease infinite`;
+                });
+            });
+            
+            // Reset animations
+            resetBtn.addEventListener('click', function() {
+                animatedElements.forEach(el => {
+                    el.style.animation = '';
+                });
+                speedRange.value = 1;
+                speedValue.textContent = '1.0x';
+                updateAnimationSpeed(1);
+            });
+            
+            // Speed control
+            speedRange.addEventListener('input', function() {
+                const speed = parseFloat(this.value);
+                speedValue.textContent = speed.toFixed(1) + 'x';
+                updateAnimationSpeed(speed);
+            });
+            
+            function updateAnimationSpeed(speed) {
+                animatedElements.forEach(el => {
+                    el.style.animationDuration = `${1/speed}s`;
+                });
+                title.style.animationDuration = `${2/speed}s`;
+            }
+            
+            // Add hover effects
+            animatedElements.forEach(el => {
+                el.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.zIndex = '10';
+                });
+                
+                el.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // Auto-play some animations on page load
+            setTimeout(() => {
+                document.querySelector('.bounce-animation').style.animationPlayState = 'running';
+                document.querySelector('.pulse-animation').style.animationPlayState = 'running';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
