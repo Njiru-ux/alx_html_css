@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - Hamburger Menu</title>
+    <link rel="stylesheet" href="8-styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo-img">
+                    <span class="logo-text">headphones</span>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <ul class="nav-menu desktop-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#search" class="nav-link search-link"><i class="fas fa-search"></i></a></li>
+                    <li class="nav-item"><a href="#cart" class="nav-link cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">3</span></a></li>
+                </ul>
+
+                <!-- Hamburger Menu Icon (Mobile Only) -->
+                <div class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+
+                <!-- Mobile Navigation Menu -->
+                <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+                <div class="mobile-menu-container" id="mobileMenu">
+                    <div class="mobile-menu-header">
+                        <div class="mobile-logo">
+                            <img src="images/logo_headphones.png" alt="Headphones Logo">
+                            <span>headphones</span>
+                        </div>
+                        <button class="mobile-menu-close" id="closeMenu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <ul class="mobile-nav-menu">
+                        <li class="mobile-nav-item"><a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li class="mobile-nav-item"><a href="#services" class="mobile-nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li class="mobile-nav-item"><a href="#products" class="mobile-nav-link"><i class="fas fa-headphones"></i> Products</a></li>
+                        <li class="mobile-nav-item"><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li class="mobile-nav-item"><a href="#search" class="mobile-nav-link"><i class="fas fa-search"></i> Search</a></li>
+                        <li class="mobile-nav-item"><a href="#cart" class="mobile-nav-link"><i class="fas fa-shopping-cart"></i> Cart <span class="mobile-cart-count">3</span></a></li>
+                        <li class="mobile-nav-item"><a href="#account" class="mobile-nav-link"><i class="fas fa-user"></i> Account</a></li>
+                        <li class="mobile-nav-item"><a href="#settings" class="mobile-nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+
+                    <div class="mobile-menu-footer">
+                        <div class="mobile-social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p class="mobile-copyright">&copy; 2024 headphones. All rights reserved.</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Title -->
+            <section class="page-title">
+                <h1>í½” Task 8: Hamburger Menu</h1>
+                <p class="subtitle">Responsive navigation with hamburger menu for mobile devices (480px or less)</p>
+                
+                <div class="demo-instructions">
+                    <h3><i class="fas fa-mobile-alt"></i> Demo Instructions:</h3>
+                    <ul>
+                        <li>Resize your browser window to 480px or less to see the hamburger menu</li>
+                        <li>Click the hamburger icon (â˜°) to open the mobile menu</li>
+                        <li>Click the X button or outside the menu to close it</li>
+                        <li>Menu includes smooth animations and transitions</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Responsive Demo -->
+            <section class="responsive-demo">
+                <h2><i class="fas fa-laptop-code"></i> Responsive Behavior</h2>
+                
+                <div class="screen-sizes">
+                    <div class="screen-size desktop">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Desktop (â‰¥ 481px)</h3>
+                        <p>Full navigation menu with all links visible</p>
+                        <div class="demo-nav">
+                            <span class="demo-nav-item">Home</span>
+                            <span class="demo-nav-item">About</span>
+                            <span class="demo-nav-item">Services</span>
+                            <span class="demo-nav-item">Products</span>
+                            <span class="demo-nav-item">Contact</span>
+                        </div>
+                    </div>
+                    
+                    <div class="screen-size mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile (â‰¤ 480px)</h3>
+                        <p>Hamburger menu icon replaces full menu</p>
+                        <div class="demo-hamburger">
+                            <span class="demo-line"></span>
+                            <span class="demo-line"></span>
+                            <span class="demo-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <h2><i class="fas fa-star"></i> Hamburger Menu Features</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-alt"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Automatically switches to hamburger menu at 480px screen width</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Smooth Animations</h3>
+                        <p>CSS transitions and JavaScript for smooth open/close animations</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-touchpad"></i>
+                        </div>
+                        <h3>Touch Friendly</h3>
+                        <p>Large tap targets and mobile-optimized interface</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Pure JavaScript</h3>
+                        <p>No frameworks or libraries - vanilla JavaScript only</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Preview -->
+            <section class="code-preview">
+                <h2><i class="fas fa-code"></i> JavaScript Implementation</h2>
+                <div class="code-block">
+                    <pre><code>// Toggle mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+const overlay = document.getElementById('mobileOverlay');
+
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+overlay.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+
+// Close menu when clicking on links
+const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo-img">
+                    <span class="logo-text">headphones</span>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> headphones. Task 8: Hamburger Menu Implementation</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script src="8-script.js"></script>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Add active class to current nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Mobile nav links
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mobileNavLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
